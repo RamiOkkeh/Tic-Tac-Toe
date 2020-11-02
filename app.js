@@ -49,7 +49,8 @@ var click3 = (event) => {
       o.includes('z3')
     ) {
       // o wins!
-      results.innerHTML = '<p class="win">O Wins!</p><input class="reset" type="button" onclick="reset()" />';
+      results.innerHTML = '<p>O Wins!</p>';
+      reset.innerHTML = '<input type="button" onclick="reset()" value="reset"/>';
       done = true;
     }
   }
@@ -61,6 +62,8 @@ var reset = () => {
   o = [];
   current = 0;
   done = false;
+  document.getElementById('win').innerHTML = '';
+  document.getElementById('reset').innerHTML = '';
   var boxes = document.getElementsByClassName('box');
   for (var i = 0; i < boxes.length; i++) {
     boxes[i].value = undefined;
