@@ -11,7 +11,7 @@ var click3 = (event) => {
   box.value = true;
   if (current === 0) {
     current = 1;
-    box.innerText = 'x';
+    box.className = 'box x';
     x.push(id);
     if ((x.includes(id[0] + '1') &&
       x.includes(id[0] + '2') &&
@@ -31,7 +31,7 @@ var click3 = (event) => {
     }
   } else {
     current = 0;
-    box.innerText = 'o';
+    box.className = 'box o';
     o.push(id);
     if ((o.includes(id[0] + '1') &&
       o.includes(id[0] + '2') &&

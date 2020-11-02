@@ -20,3 +20,15 @@
     display: flex;
     justify-content: center;
 }
+.x{
+background-image: url('https://www.flaticon.com/svg/static/icons/svg/1828/1828527.svg');
+background-size: 50% 50%;
+background-repeat: no-repeat;
+background-position: center;
+}
+.o{ 
+background-image: url('https://www.flaticon.com/svg/static/icons/svg/3570/3570073.svg');
+background-size: 50% 50%;
+background-repeat: no-repeat;
+background-position: center;
+}
