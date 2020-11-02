@@ -15,7 +15,7 @@ var click3 = (event) => {
   count++
   if (count > 8) {
     results.innerHTML = '<p>Tie!</p>';
-    reset.innerHTML = '<input type="button" onclick="reset()" value="reset"/>';
+    reset.innerHTML = '<input class="reset" type="button" onclick="reset()" value="reset"/>';
     done = true;
   }
   if (current === 0) {
@@ -36,7 +36,7 @@ var click3 = (event) => {
     ) {
       // x wins!
       results.innerHTML = '<p>X Wins!</p>';
-      reset.innerHTML = '<input type="button" onclick="reset()" value="reset"/>';
+      reset.innerHTML = '<input class="reset" type="button" onclick="reset()" value="reset"/>';
       done = true;
     }
   } else {
@@ -57,7 +57,7 @@ var click3 = (event) => {
     ) {
       // o wins!
       results.innerHTML = '<p>O Wins!</p>';
-      reset.innerHTML = '<input type="button" onclick="reset()" value="reset"/>';
+      reset.innerHTML = '<input class="reset" type="button" onclick="reset()" value="reset"/>';
       done = true;
     }
   }
@@ -69,6 +69,7 @@ var reset = () => {
   o = [];
   current = 0;
   done = false;
+  count = 0
   document.getElementById('win').innerHTML = '';
   document.getElementById('reset').innerHTML = '';
   var boxes = document.getElementsByClassName('box');
