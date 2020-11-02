@@ -1,5 +1,6 @@
 var x = [];
 var o = [];
+var count = 0
 var current = 0;
 var done = false;
 var click3 = (event) => {
@@ -11,9 +12,15 @@ var click3 = (event) => {
     return; 
   }
   box.value = true;
+  count++
+  if (count > 8) {
+    results.innerHTML = '<p>Tie!</p>';
+    reset.innerHTML = '<input type="button" onclick="reset()" value="reset"/>';
+    done = true;
+  }
   if (current === 0) {
     current = 1;
-    box.className = 'box x';
+    box.innerHTML = '<div class="x"></div>';
     x.push(id);
     if ((x.includes(id[0] + '1') &&
       x.includes(id[0] + '2') &&
@@ -34,7 +41,7 @@ var click3 = (event) => {
     }
   } else {
     current = 0;
-    box.className = 'box o';
+    box.innerHTML = '<div class="o"></div>';
     o.push(id);
     if ((o.includes(id[0] + '1') &&
       o.includes(id[0] + '2') &&
@@ -54,7 +61,6 @@ var click3 = (event) => {
       done = true;
     }
   }
-  
 };
 
 
@@ -68,6 +74,6 @@ var reset = () => {
   var boxes = document.getElementsByClassName('box');
   for (var i = 0; i < boxes.length; i++) {
     boxes[i].value = undefined;
-    boxes[i].className = 'box';
+    boxes[i].innerHTML = '';
   }
 };
