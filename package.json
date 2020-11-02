@@ -1,0 +1,22 @@
+{
+    "name": "shortly-express",
+    "version": "1.1.0",
+    "description": "Learn about authentication by building a link shortener",
+    "author": "Hack Reactor <curriculum.team@hackreactor.com>",
+    "license": "UNLICENSED",
+    "private": true,
+    "engines": {
+        "node": ">=4.0.0"
+    },
+    "scripts": {
+        "postinstall": "curl -s https://raw.githubusercontent.com/reactorcore/pomander/master/bin/install | bash && ./node_modules/.bin/jsdoc ./server -r -d docs",
+        "lint": "eslint ./"
+    },
+    "dependencies": {
+        "bluebird": "^3.3.4",
+        "ejs": "^2.4.1"
+    },
+    "devDependencies": {
+        "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
+    }
+}
