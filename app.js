@@ -1,8 +1,9 @@
 var all = [];
 var x = [];
+var o = [];
+var current = 0;
 var click3 = (event) => {
-    if (JSON.stringify(all) === '[]') {
-        console.log(event)
-        // document.getElementById()
-    }
-}
+  console.log(event);
+  
+    
+};
