@@ -32,3 +32,13 @@ background-size: 50% 50%;
 background-repeat: no-repeat;
 background-position: center;
 }
+#after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+.reset{
+}
+.win{
+}

@@ -5,6 +5,8 @@ var done = false;
 var click3 = (event) => {
   var id = event.target.id;
   var box = document.getElementById(id);
+  var results = document.getElementById('win');
+  var reset = document.getElementById('reset');
   if (box.value || done) {
     return; 
   }
@@ -26,7 +28,8 @@ var click3 = (event) => {
       x.includes('z3')
     ) {
       // x wins!
-      console.log('x wins!');
+      results.innerHTML = '<p>X Wins!</p>';
+      reset.innerHTML = '<input type="button" onclick="reset()" value="reset"/>';
       done = true;
     }
   } else {
@@ -46,9 +49,21 @@ var click3 = (event) => {
       o.includes('z3')
     ) {
       // o wins!
-      console.log('o wins!');
+      results.innerHTML = '<p class="win">O Wins!</p><input class="reset" type="button" onclick="reset()" />';
       done = true;
     }
   }
   
+};
+
+var reset = () => {
+  x = [];
+  o = [];
+  current = 0;
+  done = false;
+  var boxes = document.getElementsByClassName('box');
+  for (var i = 0; i < boxes.length; i++) {
+    boxes[i].value = undefined;
+    boxes[i].className = 'box';
+  }
 };
