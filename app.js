@@ -57,6 +57,7 @@ var click3 = (event) => {
   
 };
 
+
 var reset = () => {
   x = [];
   o = [];
