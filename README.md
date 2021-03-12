@@ -2,7 +2,7 @@
 
 <div style="text-align:center">
     <a align="center" href="https://idsjndkjendk.herokuapp.com/index.html">
-        <img src="header.gif" width="500" style="margin-left:100px;" align="center" alt="Memory-perview"/>
+        <img src="header.png" width="500" style="margin-left:100px;" align="center" alt="tic-tac-toe-perview"/>
     </a>
 </div>
 
